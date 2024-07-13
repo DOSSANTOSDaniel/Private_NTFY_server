@@ -37,23 +37,39 @@ valeurs possibles: read-write, read-only, write-only et deny-all.|
  Les nouveau certificat sera détecté et intégré à la configuration automatiquement.
  ### Création de conteneurs avec docker-compose
  ```
- services:
+version: '3.8'
+
+services:
   ntfy:
-    image: dossantosd/priv-ntfy
+    image: ntfy:latest
     container_name: ntfy
-    command:
-      - serve ????????????????
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      - DOMAIN_NAME='ex.exemple.ex'
-      - EMAIL_ADDRESS='ex@exemple.ex'
-      - LOG_LEVEL='info'
+      - TZ=Europe/Paris
+      - NTFY_DOMAIN_NAME=https://localhost
+      - NTFY_CACHE_DURATION=24h
+      - NTFY_ATTACHMENT_TOTAL_SIZE_LIMIT=10G
+      - NTFY_ATTACHMENT_FILE_SIZE_LIMIT=1G
+      - NTFY_ATTACHMENT_EXPIRY_DURATION=72h
+      - NTFY_KEEPALIVE_INTERVAL=55s
+      - NTFY_LOG_LEVEL=warn
     volumes:
-      - /var/cache/ntfy:/var/cache/ntfy
-      - /etc/ntfy:/etc/ntfy
-      - /etc/ntfy/user_cert
+      - ntfy_config:/etc/ntfy
+      - ntfy_cache:/var/cache/ntfy
+      - ntfy_data:/var/lib/ntfy
+      - ntfy_logs:/var/log
     ports:
-      - 443:443
-    restart: unless-stopped
+      - "80:80"
+      - "443:443"
+
+volumes:
+  ntfy_config:
+  ntfy_cache:
+  ntfy_data:
+  ntfy_logs:
+
  ```
 
 ### Utilisation de NTFY
