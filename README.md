@@ -39,6 +39,7 @@ Image basé sur alpine:latest.
 ### Utilisation de NTFY
 #### Connexion à l'interface web
 Si on est sur l'ordinateur où docker est installé alors aller à l'adresse https://localhost ou https://127.0.1.1.
+
 Si vous êtes sur un autre ordinateur sur le réseau local, alors utilisez l'adresse IP du système où docker est installé, exemple https://192.168.1.35.
 
 ### Utilisation de curl pour envoyer les messages 
