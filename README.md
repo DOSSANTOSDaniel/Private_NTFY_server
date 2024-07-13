@@ -17,8 +17,7 @@ Image basé sur alpine:latest.
 |---|---|
 |DOMAIN_NAME|URL pour accéder à l'interface web, https://localhost par défaut.|
 |EMAIL_ADDRESS|Adresse email pour la configuration de webpush (optionnel).|
-|DEFAULT_ACCESS|Définit les droits d’accès par défaut, Configuration par défaut avec "deny-all" ce qui permet d’avoir une instance complètement privée,
-valeurs possibles: read-write, read-only, write-only et deny-all.|
+|DEFAULT_ACCESS|Définit les droits d’accès par défaut, Configuration par défaut avec "deny-all" ce qui permet d’avoir une instance complètement privée, valeurs possibles: read-write, read-only, write-only et deny-all.|
 |CACHE_DURATION|Durée de stockage des messages en cache, par défaut c’est 24h.|
 |ATTACHMENT_TOTAL_SIZE_LIMIT|Taille limite du cache concernant les pièces jointes, par défaut 10G.|
 |ATTACHMENT_FILE_SIZE_LIMIT|Taille limite des pièces jointes par fichier, par défaut 1 Go.|
@@ -34,7 +33,7 @@ valeurs possibles: read-write, read-only, write-only et deny-all.|
 `docker run -d -p 443:443 -e DOMAIN_NAME='noti.exemple.ex' -e EMAIL_ADDRESS='ex@exemple.ex' ntfy_v15`
 #### Avec un certificat SSL personnel
  `docker run -d -p 80:80 -p 443:443 -v /home/user/cert/:/etc/ntfy/user_cert/ ntfy_v15`
- Les nouveau certificat sera détecté et intégré à la configuration automatiquement.
+ Le nouveau certificat sera détecté et intégré à la configuration automatiquement.
 
 ### Utilisation de NTFY
 #### Connexion à l'interface web
