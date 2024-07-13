@@ -3,6 +3,8 @@ Dockerfile et script entrypoint permettant de créer une image pour le déploiem
 
 Image basé sur alpine:latest.
 
+[Voir le projet sur DockerHub⁠](https://hub.docker.com/r/dossantosd/private_ntfy_server)
+
 ![Capture d'écran](capture.png)
 
 ## Fonctionnalités implémentées
