@@ -121,7 +121,6 @@ IP.2=127.0.1.1
 IP.3=::1
 EOF
 
-
 RUN openssl req -new -newkey rsa:4096 -days $CERT_DAYS -nodes -x509 \
   -subj "/C=${COUNTRY}/ST=${STATE}/L=${LOCALITY}/O=${ORGANIZATION}/OU=${ORGANIZATIONAL_UNIT}/CN=${COMMON_NAME}" \
   -keyout $CERT_KEY -out $CERT_CRT \
