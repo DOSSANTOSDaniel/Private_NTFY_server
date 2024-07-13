@@ -85,7 +85,8 @@ Cette image contient un script qui se lance à chaque création ou démarrage d'
 
 Si vous avez démarré un conteneur et que celui-ci s'éteint directement c'est probablement une erreur engendré par une mauvaise saisie d'une variable d'environment, pour avoir les messages de log du conteneur il faut qu'au démarrage du conteneur monter le dossier /var/log du conteneur, exemple avec une erreur sur la variable EMAIL_ADDRESS :
 
-- docker run -v $(pwd)/logs_myntfy/:/var/log/ -e EMAIL_ADDRESS="ex@mple@gmail.com" -p 443:443 -itd myntfy && cat logs_myntfy/ntfy.log
+docker run -v $(pwd)/logs_myntfy/:/var/log/ -e EMAIL_ADDRESS="ex@mple@gmail.com" -p 443:443 -itd myntfy && cat logs_myntfy/ntfy.log
 
 f60f4d6b99c4bbb904941da56c16dc31c5061813a31470504de8f74d44e30ffc
+
 2024-07-13__21:08:56   EMAIL_ADDRESS=ex@mple@gmail.com : Adresse e-mail invalide
