@@ -70,7 +70,7 @@ L'utilisateur administrateur "admin" est créé par défaut, son mot de passe es
 |/etc/ntfy|Dossier où se trouve le fichier de configuration du serveur server.yml.|
 |/var/lib/ntfy/attachments|Dossier abritant le cache des pièces jointes.|
 
-## Le dépannage 
+## Dépannage 
 Cette image contient un script qui se lance à chaque création ou démarrage d'un conteneur, ce script permet de configurer le serveur via les variables d'environment et autre.
 
 Si vous avez démarré un conteneur et que celui-ci s'éteint directement c'est probablement une erreur engendré par une mauvaise saisie d'une variable d'environment, pour avoir les messages de log du conteneur il faut qu'au démarrage du conteneur monter le dossier /var/log du conteneur, exemple avec une erreur sur la variable EMAIL_ADDRESS :
