@@ -33,7 +33,7 @@ Image basé sur alpine:latest.
 `docker run -d -p 443:443 -e DOMAIN_NAME='noti.exemple.ex' -e EMAIL_ADDRESS='ex@exemple.ex' ntfy_v15`
 #### Avec un certificat SSL personnel
  `docker run -d -p 80:80 -p 443:443 -v /home/user/cert/:/etc/ntfy/user_cert/ ntfy_v15`
- Le nouveau certificat sera détecté et intégré à la configuration automatiquement.
+ - Le nouveau certificat sera détecté et intégré à la configuration automatiquement.
 
 ### Utilisation de NTFY
 #### Connexion à l'interface web
