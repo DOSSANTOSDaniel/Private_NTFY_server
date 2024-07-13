@@ -2,7 +2,7 @@
 Dockerfile et script entrypoint permettant de créer une image pour le déploiment d'un serveur de notifications Push(NTFY).
 Image basé sur alpine:latest.
 
-![Capture d'écran]()
+![Capture d'écran](Capture d’écran ntfy.png)
 
 ## Fonctionnalités implémentées
 - Configuration en HTTPS (Certificat autosigné) par défaut.
