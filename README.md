@@ -23,8 +23,7 @@ valeurs possibles: read-write, read-only, write-only et deny-all.|
 |ATTACHMENT_TOTAL_SIZE_LIMIT|Taille limite du cache concernant les pièces jointes, par défaut 10G.|
 |ATTACHMENT_FILE_SIZE_LIMIT|Taille limite des pièces jointes par fichier, par défaut 1 Go.|
 |ATTACHMENT_EXPIRY_DURATION|Durée après laquelle les pièces jointes téléchargées seront supprimées, par défaut 72h.|
-|KEEPALIVE_INTERVAL|Intervalle pendant lequel les messages keepalive sont envoyés au client, dans le but d’empêcher les intermédiaires de fermer la connexion pour cause d’inactivité,
-par défaut c'est 55 secondes.|
+|KEEPALIVE_INTERVAL|Intervalle pendant lequel les messages keepalive sont envoyés au client, dans le but d’empêcher les intermédiaires de fermer la connexion pour cause d’inactivité,par défaut c'est 55 secondes.|
 |LOG_LEVEL|Niveau de journalisation(logs), par défaut "warn", valeurs possibles: panic, fatal, error, warn, info et debug/trace.|
 
 ## Usage
