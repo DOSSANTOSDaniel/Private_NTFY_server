@@ -35,42 +35,6 @@ valeurs possibles: read-write, read-only, write-only et deny-all.|
 #### Avec un certificat SSL personnel
  `docker run -d -p 80:80 -p 443:443 -v /home/user/cert/:/etc/ntfy/user_cert/ ntfy_v15`
  Les nouveau certificat sera détecté et intégré à la configuration automatiquement.
- ### Création de conteneurs avec docker-compose
- ```
-version: '3.8'
-
-services:
-  ntfy:
-    image: ntfy:latest
-    container_name: ntfy
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      - TZ=Europe/Paris
-      - NTFY_DOMAIN_NAME=https://localhost
-      - NTFY_CACHE_DURATION=24h
-      - NTFY_ATTACHMENT_TOTAL_SIZE_LIMIT=10G
-      - NTFY_ATTACHMENT_FILE_SIZE_LIMIT=1G
-      - NTFY_ATTACHMENT_EXPIRY_DURATION=72h
-      - NTFY_KEEPALIVE_INTERVAL=55s
-      - NTFY_LOG_LEVEL=warn
-    volumes:
-      - ntfy_config:/etc/ntfy
-      - ntfy_cache:/var/cache/ntfy
-      - ntfy_data:/var/lib/ntfy
-      - ntfy_logs:/var/log
-    ports:
-      - "80:80"
-      - "443:443"
-
-volumes:
-  ntfy_config:
-  ntfy_cache:
-  ntfy_data:
-  ntfy_logs:
-
- ```
 
 ### Utilisation de NTFY
 #### Connexion à l'interface web
