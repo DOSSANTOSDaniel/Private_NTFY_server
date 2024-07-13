@@ -76,5 +76,6 @@ L'utilisateur administrateur "admin" est créé par défaut, son mot de passe es
 Cette image contient un script qui se lance à chaque création ou démarrage d'un conteneur, ce script permet de configurer le serveur via les variables d'environment et autre.
 
 Si vous avez démarré un conteneur et que celui-ci s'éteint directement c'est probablement une erreur engendré par une mauvaise saisie d'une variable d'environment, pour avoir les messages de log du conteneur il faut qu'au démarrage du conteneur monter le dossier /var/log du conteneur, exemple avec une erreur sur la variable EMAIL_ADDRESS :
+
 `docker run -v $(pwd)/logs_myntfy/:/var/log/ -e EMAIL_ADDRESS="ex@mple@gmail.com" -p 443:443 -itd myntfy && cat logs_myntfy/ntfy.log`
 `2024-07-13__21:08:56   EMAIL_ADDRESS=ex@mple@gmail.com : Adresse e-mail invalide`
