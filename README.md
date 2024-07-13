@@ -27,14 +27,22 @@ Image basé sur alpine:latest.
 |LOG_LEVEL|Niveau de journalisation(logs), par défaut "warn", valeurs possibles: panic, fatal, error, warn, info et debug/trace.|
 
 ## Usage
+### Récupération du dépot
+```
+git clone https://github.com/DOSSANTOSDaniel/Private_NTFY_server.git
+
+cd Private_NTFY_server/
+```
+### Création de l'image
+`docker build -t privntfy .`
 ### Création de conteneurs avec docker run
 #### Valeurs par défaut
-`docker run -d -p 443:443 ntfy_v15`
+`docker run -d -p 443:443 privntfy`
 #### Avec variables d'environnement modifié
-`docker run -d -p 443:443 -e DOMAIN_NAME='noti.exemple.ex' -e EMAIL_ADDRESS='ex@exemple.ex' ntfy_v15`
+`docker run -d -p 443:443 -e DOMAIN_NAME='noti.exemple.ex' -e EMAIL_ADDRESS='ex@exemple.ex' privntfy`
 #### Avec un certificat SSL personnel
- `docker run -d -p 80:80 -p 443:443 -v /home/user/cert/:/etc/ntfy/user_cert/ ntfy_v15`
- - Le nouveau certificat sera détecté et intégré à la configuration automatiquement.
+`docker run -d -p 80:80 -p 443:443 -v /home/user/cert/:/etc/ntfy/user_cert/ privntfy`
+- Le nouveau certificat sera détecté et intégré à la configuration automatiquement.
 
 ### Utilisation de NTFY
 #### Connexion à l'interface web
