@@ -1,5 +1,5 @@
 # Private_NTFY_server
-Dockerfile et script entrypoint permettant de créer une image pour le déploiment d'un serveur de notifications Push(NTFY).
+Dockerfile et script entrypoint permettant de créer une image pour le déploiement d'un serveur de notifications Push(NTFY).
 
 Image basé sur alpine:latest.
 
